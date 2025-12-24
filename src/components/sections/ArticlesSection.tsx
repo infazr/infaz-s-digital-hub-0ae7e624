@@ -30,16 +30,16 @@ const articles = [
 
 export const ArticlesSection = () => {
   return (
-    <section id="articles" className="py-24">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Technical Articles</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+    <section id="articles" className="py-16 sm:py-24">
+      <div className="container px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Technical Articles</h2>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             I write about software engineering, databases, and backend technologies
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12">
           {articles.map((article) => (
             <a
               key={article.title}
@@ -55,13 +55,14 @@ export const ArticlesSection = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-sm leading-snug line-clamp-3 group-hover:text-primary transition-colors">
+              <div className="p-3 sm:p-5">
+                <h3 className="font-semibold text-xs sm:text-sm leading-snug line-clamp-2 sm:line-clamp-3 group-hover:text-primary transition-colors">
                   {article.title}
                 </h3>
-                <div className="flex items-center gap-1 mt-3 text-xs text-muted-foreground group-hover:text-primary transition-colors">
-                  <span>Read on Medium</span>
-                  <ExternalLink size={12} />
+                <div className="flex items-center gap-1 mt-2 sm:mt-3 text-xs text-muted-foreground group-hover:text-primary transition-colors">
+                  <span className="hidden sm:inline">Read on Medium</span>
+                  <span className="sm:hidden">Read more</span>
+                  <ExternalLink size={10} className="sm:w-3 sm:h-3" />
                 </div>
               </div>
             </a>
@@ -69,7 +70,7 @@ export const ArticlesSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
             <a
               href="https://infazrumy.medium.com/"
               target="_blank"

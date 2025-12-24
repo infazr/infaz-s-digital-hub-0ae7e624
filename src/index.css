@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,98 +6,106 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 20% 10%;
+    /* Azure-inspired light theme */
+    --background: 210 25% 97%;
+    --foreground: 210 40% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 210 40% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 210 40% 11%;
 
-    --primary: 217 91% 60%;
+    /* Azure Blue Primary */
+    --primary: 207 90% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 20% 20%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 210 40% 20%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 10% 46%;
+    --muted: 210 15% 93%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 142 76% 36%;
+    /* Azure Teal Accent */
+    --accent: 187 80% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 207 90% 42%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(262, 83%, 58%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(168, 76%, 42%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(220, 20%, 97%) 0%, hsl(220, 25%, 94%) 100%);
-    --shadow-soft: 0 4px 20px -2px hsl(220 20% 10% / 0.08);
-    --shadow-card: 0 8px 30px -4px hsl(220 20% 10% / 0.1);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.15);
+    /* Custom Azure tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(207, 90%, 42%) 0%, hsl(207, 90%, 54%) 50%, hsl(187, 80%, 42%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210, 25%, 97%) 0%, hsl(210, 30%, 94%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210, 30%, 96%) 0%, hsl(207, 40%, 92%) 50%, hsl(210, 25%, 97%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 98%) 100%);
+    --shadow-soft: 0 2px 8px -2px hsl(210 40% 11% / 0.08);
+    --shadow-card: 0 4px 16px -4px hsl(210 40% 11% / 0.12);
+    --shadow-glow: 0 0 30px hsl(207 90% 42% / 0.15);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 25% 97%;
+    --sidebar-foreground: 210 40% 20%;
+    --sidebar-primary: 207 90% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 94%;
+    --sidebar-accent-foreground: 210 40% 20%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 207 90% 42%;
   }
 
   .dark {
-    --background: 224 28% 8%;
-    --foreground: 210 20% 98%;
+    /* Azure-inspired dark theme */
+    --background: 216 28% 7%;
+    --foreground: 210 20% 96%;
 
-    --card: 224 25% 12%;
-    --card-foreground: 210 20% 98%;
+    --card: 216 25% 11%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 224 25% 12%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 216 25% 11%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 217 91% 60%;
+    /* Azure Blue Primary - brighter for dark mode */
+    --primary: 207 90% 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 224 22% 18%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 216 22% 16%;
+    --secondary-foreground: 210 20% 96%;
 
-    --muted: 224 22% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 216 22% 16%;
+    --muted-foreground: 210 15% 60%;
 
-    --accent: 142 76% 45%;
+    /* Azure Teal Accent */
+    --accent: 187 80% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 210 20% 96%;
 
-    --border: 224 18% 20%;
-    --input: 224 18% 20%;
-    --ring: 217 91% 60%;
+    --border: 216 22% 18%;
+    --input: 216 22% 18%;
+    --ring: 207 90% 54%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(262, 83%, 58%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(142, 76%, 45%) 0%, hsl(168, 76%, 50%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(224, 28%, 8%) 0%, hsl(224, 30%, 12%) 100%);
-    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
-    --shadow-card: 0 8px 30px -4px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 60px hsl(217 91% 60% / 0.2);
+    --gradient-primary: linear-gradient(135deg, hsl(207, 90%, 54%) 0%, hsl(207, 90%, 62%) 50%, hsl(187, 80%, 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(216, 28%, 7%) 0%, hsl(216, 30%, 10%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(216, 28%, 7%) 0%, hsl(216, 30%, 10%) 50%, hsl(216, 28%, 8%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(216, 25%, 11%) 0%, hsl(216, 25%, 13%) 100%);
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(207 90% 54% / 0.2);
 
-    --sidebar-background: 224 28% 10%;
-    --sidebar-foreground: 210 20% 98%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-background: 216 28% 9%;
+    --sidebar-foreground: 210 20% 96%;
+    --sidebar-primary: 207 90% 54%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 224 22% 18%;
-    --sidebar-accent-foreground: 210 20% 98%;
-    --sidebar-border: 224 18% 20%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 216 22% 16%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 216 22% 18%;
+    --sidebar-ring: 207 90% 54%;
   }
 }
 
@@ -147,7 +155,7 @@
   }
 
   .card-hover:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-card);
   }
 
@@ -160,6 +168,17 @@
   .animate-delay-200 { animation-delay: 0.2s; }
   .animate-delay-300 { animation-delay: 0.3s; }
   .animate-delay-400 { animation-delay: 0.4s; }
+
+  /* Azure-style card */
+  .azure-card {
+    @apply bg-card rounded-lg border border-border;
+    background-image: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .azure-card:hover {
+    box-shadow: var(--shadow-card);
+  }
 }
 
 @layer utilities {
@@ -184,21 +203,21 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(217 91% 60% / 0.3);
+    box-shadow: 0 0 15px hsl(207 90% 42% / 0.2);
   }
   50% {
-    box-shadow: 0 0 40px hsl(217 91% 60% / 0.5);
+    box-shadow: 0 0 30px hsl(207 90% 42% / 0.4);
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
