@@ -27,34 +27,34 @@ const recommendations = [
 
 export const RecommendationsSection = () => {
   return (
-    <section id="recommendations" className="py-24 bg-secondary/30">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">What People Say</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+    <section id="recommendations" className="py-16 sm:py-24 bg-secondary/30">
+      <div className="container px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">What People Say</h2>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             Recommendations from colleagues and leaders I've worked with
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {recommendations.map((rec) => (
             <div
               key={rec.name}
-              className="p-6 rounded-xl bg-card border border-border card-hover flex flex-col"
+              className="p-4 sm:p-6 rounded-xl bg-card border border-border card-hover flex flex-col"
             >
-              <div className="text-primary mb-4">
-                <Quote size={32} />
+              <div className="text-primary mb-3 sm:mb-4">
+                <Quote size={24} className="sm:w-8 sm:h-8" />
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 flex-1 line-clamp-6 sm:line-clamp-none">
                 "{rec.content}"
               </p>
-              <div className="border-t border-border pt-4">
-                <h4 className="font-semibold">{rec.name}</h4>
-                <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{rec.title}</p>
-                <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+              <div className="border-t border-border pt-3 sm:pt-4">
+                <h4 className="font-semibold text-sm sm:text-base">{rec.name}</h4>
+                <p className="text-xs text-muted-foreground mt-0.5 sm:mt-1 line-clamp-2">{rec.title}</p>
+                <div className="flex items-center gap-1.5 sm:gap-2 mt-1.5 sm:mt-2 text-xs text-muted-foreground">
                   <span>{rec.date}</span>
                   <span>•</span>
-                  <span>{rec.relationship}</span>
+                  <span className="truncate">{rec.relationship}</span>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ export const RecommendationsSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
             <a
               href="https://www.linkedin.com/in/infaz-rumy/"
               target="_blank"
@@ -70,7 +70,7 @@ export const RecommendationsSection = () => {
               className="gap-2"
             >
               <Linkedin size={18} />
-              View All Recommendations on LinkedIn
+              View All on LinkedIn
             </a>
           </Button>
         </div>
